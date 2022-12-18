@@ -1,5 +1,6 @@
 import { groupEpisodesByYear } from '../../lib/helpers';
 import { EpisodeType } from '../../lib/types';
+import { EpisodeCard } from './EpisodeCard';
 
 type YearViewProps = {
   episodes: EpisodeType[];
@@ -14,19 +15,17 @@ export const YearView = (props: YearViewProps) => {
         return (
           <div key={n}>
             <h2>
-              {data.year} ({data.episodes.length})
+              {data.year > 0
+                ? data.year
+                : `${data.year * -1} vor der Zeitenwende`}{' '}
+              <span style={{ fontSize: 15 }}>
+                ({data.episodes.length} Episode{data.episodes.length > 1 && 'n'}
+                )
+              </span>
             </h2>
-            <ul>
-              {data.episodes.map((episode, i) => {
-                return (
-                  <div key={i}>
-                    <li>
-                      {episode.year} - {episode.title}
-                    </li>
-                  </div>
-                );
-              })}
-            </ul>
+            {data.episodes.map((episode, i) => {
+              return <EpisodeCard episode={episode} key={i} />;
+            })}
           </div>
         );
       })}

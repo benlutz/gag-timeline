@@ -16,12 +16,12 @@ export const getCentury = (year: number) => {
 export const groupEpisodesByYear = (episodes: EpisodeType[]) => {
   const groupByYear = _.groupBy(episodes, (episode) => episode.year);
   const episodesbyYear = _.map(groupByYear, (episodes, year) => ({
-    year,
+    year: parseInt(year),
     episodes,
     episodeCount: episodes.length,
   }));
 
-  return episodesbyYear;
+  return episodesbyYear.sort((a, b) => a.year - b.year);
 };
 
 export const groupEpisodesByCentury = (episodes: EpisodeType[]) => {

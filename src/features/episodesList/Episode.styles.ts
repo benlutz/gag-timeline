@@ -14,3 +14,14 @@ export const StyledEpisodeCard = styled('div', {
 export const StyledEpisodeCardContent = styled('div', {
   padding: '0.8rem',
 });
+
+export const StyledImagePlaceholder = styled('div', {
+  minWidth: 100,
+  maxWidth: 100,
+  display: 'flex',
+  background: 'grey',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+  fontSize: 10,
+});

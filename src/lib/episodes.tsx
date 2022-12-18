@@ -3,10 +3,11 @@ import { getCentury, getDecade } from './helpers';
 import { EpisodeType } from './types';
 import episodeYearData from './episodeYearData.json';
 
+export const podigeeFeed =
+  'https://geschichten-aus-der-geschichte.podigee.io/feed/mp3';
+
 export const getEpisodesFromRSSFeed = async () => {
-  const feed = await parse(
-    'https://geschichten-aus-der-geschichte.podigee.io/feed/mp3'
-  );
+  const feed = await parse(podigeeFeed);
 
   const episodes = feed.items.map((item: EpisodeType) => {
     item.id = item.title.split(':')[0];

@@ -1,5 +1,9 @@
 import { EpisodeType } from '../../lib/types';
-import { StyledEpisodeCard, StyledEpisodeCardContent } from './Episode.styles';
+import {
+  StyledEpisodeCard,
+  StyledEpisodeCardContent,
+  StyledImagePlaceholder,
+} from './Episode.styles';
 
 type EpisodeCardProps = {
   episode: EpisodeType;
@@ -18,17 +22,12 @@ export const EpisodeCard = (props: EpisodeCardProps) => {
             style={{ maxWidth: 100, maxHeight: 100, aspectRatio: 1 }}
           />
         ) : (
-          <div
-            style={{
-              minWidth: 100,
-              display: 'flex',
-              background: 'grey',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <p>No Image</p>
-          </div>
+          <StyledImagePlaceholder>
+            <span>
+              Kein Bild <br />
+              verfügbar
+            </span>
+          </StyledImagePlaceholder>
         )}
         <StyledEpisodeCardContent>
           <p style={{ margin: 0, fontSize: 14 }}>

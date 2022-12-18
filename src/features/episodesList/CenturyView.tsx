@@ -19,18 +19,12 @@ export const CenturyView = (props: CenturyViewProps) => {
                 ? `${data.century}. Jahrhundert`
                 : `Vor der Zeitenwende`}{' '}
               <span style={{ fontSize: 15 }}>
-                ({data.episodes.length} Episoden)
+                ({data.episodes.length} Episode{data.episodes.length > 1 && 'n'}
+                )
               </span>
             </h2>
             {data.episodes.map((episode, i) => {
-              return (
-                <EpisodeCard episode={episode} key={i}></EpisodeCard>
-                //   <div key={i}>
-                //     <li>
-                //       {episode.year} - {episode.title}
-                //     </li>
-                //   </div>
-              );
+              return <EpisodeCard episode={episode} key={i} />;
             })}
           </div>
         );

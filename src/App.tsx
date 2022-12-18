@@ -2,6 +2,7 @@ import React from 'react';
 import { CenturyView } from './features/episodesList/CenturyView';
 import { YearView } from './features/episodesList/YearView';
 import { Footer } from './features/Footer/Footer';
+import { StyledButton } from './features/Layout/Button.styles';
 import { StyledContainer } from './features/Layout/Layout.styles';
 import { Navbar } from './features/Navbar/Navbar';
 import { getEpisodesFromRSSFeed } from './lib/episodes';
@@ -11,7 +12,7 @@ import { globalStyles } from './stitches.config';
 const App = () => {
   globalStyles();
   const [episodes, setEpisodes] = React.useState<EpisodeType[]>([]);
-  const [view] = React.useState<'century' | 'year'>('century');
+  const [view, setView] = React.useState<'century' | 'year'>('year');
 
   React.useEffect(() => {
     const doAsync = async () => {
@@ -50,6 +51,20 @@ const App = () => {
         <>----</>
         <p>Episodes With Year: {episodesWithYear?.length}</p>
         <p>Episodes Without Year: {episodesWithoutYear?.length}</p> */}
+        <StyledButton
+          onClick={() => setView('century')}
+          position="left"
+          active={view === 'century'}
+        >
+          Jahrzehnte
+        </StyledButton>
+        <StyledButton
+          onClick={() => setView('year')}
+          position="right"
+          active={view === 'year'}
+        >
+          Jahre
+        </StyledButton>
 
         {view === 'century' && <CenturyView episodes={episodesWithYear} />}
         {view === 'year' && <YearView episodes={episodesWithYear} />}
@@ -57,11 +72,17 @@ const App = () => {
         <h2>Ohne Zuordnung</h2>
         <ul>
           {episodesWithoutYear.map((episode, i) => {
-            return <li key={i}>{episode.title}</li>;
+            return (
+              <li key={i}>
+                <a href={episode.link} target="_blank" rel="noreferrer">
+                  {episode.title}
+                </a>
+              </li>
+            );
           })}
         </ul>
+        <Footer />
       </StyledContainer>
-      <Footer />
     </div>
   );
 };
