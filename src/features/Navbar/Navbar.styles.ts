@@ -3,7 +3,7 @@ import { styled } from '../../stitches.config';
 export const StyledHeader = styled('header', {
   display: 'flex',
   justifyContent: 'space-between',
-  padding: 15,
+  padding: 5,
   alignItems: 'center',
   backgroundColor: '$primary',
   zIndex: 9999,

@@ -11,8 +11,8 @@ import { globalStyles } from './stitches.config';
 
 const App = () => {
   globalStyles();
-  const [episodes, setEpisodes] = React.useState<EpisodeType[]>([]);
-  const [view, setView] = React.useState<'century' | 'year'>('year');
+  const [episodes, setEpisodes] = React.useState<EpisodeType[] | null>(null);
+  const [view, setView] = React.useState<'century' | 'year'>('century');
 
   React.useEffect(() => {
     const doAsync = async () => {
@@ -33,6 +33,8 @@ const App = () => {
   //   (episode) => episode.itunes_episodeType === 'full'
   // );
 
+  if (!episodes) return <div>Loading Data...</div>;
+
   const episodesWithYear = episodes.filter(
     (episode) => episode.year && episode.itunes_episodeType === 'full'
   );
@@ -42,8 +44,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar variant="sticky" />
       <StyledContainer>
+        <h1 style={{ textAlign: 'center' }}>
+          Geschichten aus der Geschichte <br /> gefiltert
+        </h1>
         {/* <p>RSS Items: {episodes?.length}</p>
         <p>Full Items: {fullEps?.length}</p>
         <p>BonusEps: {bonusEps?.length}</p>
@@ -51,20 +56,22 @@ const App = () => {
         <>----</>
         <p>Episodes With Year: {episodesWithYear?.length}</p>
         <p>Episodes Without Year: {episodesWithoutYear?.length}</p> */}
-        <StyledButton
-          onClick={() => setView('century')}
-          position="left"
-          active={view === 'century'}
-        >
-          Jahrzehnte
-        </StyledButton>
-        <StyledButton
-          onClick={() => setView('year')}
-          position="right"
-          active={view === 'year'}
-        >
-          Jahre
-        </StyledButton>
+        <div style={{ textAlign: 'center' }}>
+          <StyledButton
+            onClick={() => setView('century')}
+            position="left"
+            active={view === 'century'}
+          >
+            Jahrhunderte
+          </StyledButton>
+          <StyledButton
+            onClick={() => setView('year')}
+            position="right"
+            active={view === 'year'}
+          >
+            Jahre
+          </StyledButton>
+        </div>
 
         {view === 'century' && <CenturyView episodes={episodesWithYear} />}
         {view === 'year' && <YearView episodes={episodesWithYear} />}

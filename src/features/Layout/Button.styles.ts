@@ -7,6 +7,10 @@ export const StyledButton = styled('button', {
   paddingVertical: '1rem',
 
   border: 'solid',
+  borderColor: '$primary',
+  color: '$primary',
+  width: 100,
+  textAlign: 'center',
 
   variants: {
     position: {

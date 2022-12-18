@@ -19,8 +19,8 @@ export const YearView = (props: YearViewProps) => {
                 ? data.year
                 : `${data.year * -1} vor der Zeitenwende`}{' '}
               <span style={{ fontSize: 15 }}>
-                ({data.episodes.length} Episode{data.episodes.length > 1 && 'n'}
-                )
+                ({data.episodes.length} Episode
+                {data.episodes.length > 1 && 'n'})
               </span>
             </h2>
             {data.episodes.map((episode, i) => {

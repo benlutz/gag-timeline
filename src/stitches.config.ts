@@ -43,7 +43,13 @@ export const globalStyles = globalCss({
     all: 'unset',
     cursor: 'pointer',
   },
+  h1: {
+    marginBottom: 50,
+  },
   h2: {
-    marginTop: 50,
+    marginTop: 40,
+  },
+  html: {
+    scrollBehavior: 'smooth',
   },
 });

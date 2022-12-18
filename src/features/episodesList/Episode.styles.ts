@@ -1,10 +1,11 @@
 import { styled } from '../../stitches.config';
 
 export const StyledEpisodeCard = styled('div', {
-  border: 'solid',
+  // border: 'solid',
   borderRadius: 25,
-  borderColor: 'LightGrey',
+  // borderColor: 'LightGrey',
   overflow: 'hidden',
+  boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
 
   display: 'flex',
   marginVertical: 10,
