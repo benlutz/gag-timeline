@@ -12,5 +12,5 @@ export const StyledEpisodeCard = styled('div', {
 });
 
 export const StyledEpisodeCardContent = styled('div', {
-  padding: 5,
+  padding: '0.8rem',
 });

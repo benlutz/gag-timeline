@@ -31,7 +31,7 @@ export const EpisodeCard = (props: EpisodeCardProps) => {
           </div>
         )}
         <StyledEpisodeCardContent>
-          <p style={{ margin: 0 }}>
+          <p style={{ margin: 0, fontSize: 14 }}>
             {episode.year} - {episode.id}
           </p>
           <h3 style={{ marginTop: 0, marginBottom: 0, fontSize: 16 }}>

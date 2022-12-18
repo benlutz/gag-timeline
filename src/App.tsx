@@ -1,6 +1,7 @@
 import React from 'react';
 import { CenturyView } from './features/episodesList/CenturyView';
 import { YearView } from './features/episodesList/YearView';
+import { Footer } from './features/Footer/Footer';
 import { StyledContainer } from './features/Layout/Layout.styles';
 import { Navbar } from './features/Navbar/Navbar';
 import { getEpisodesFromRSSFeed } from './lib/episodes';
@@ -60,6 +61,7 @@ const App = () => {
           })}
         </ul>
       </StyledContainer>
+      <Footer />
     </div>
   );
 };
