@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/benlutz/gag-timeline/static/css/main.e6c13ad2.css",
-    "main.js": "/benlutz/gag-timeline/static/js/main.00693d54.js",
-    "static/js/787.8ce5fb40.chunk.js": "/benlutz/gag-timeline/static/js/787.8ce5fb40.chunk.js",
-    "index.html": "/benlutz/gag-timeline/index.html",
-    "main.e6c13ad2.css.map": "/benlutz/gag-timeline/static/css/main.e6c13ad2.css.map",
-    "main.00693d54.js.map": "/benlutz/gag-timeline/static/js/main.00693d54.js.map",
-    "787.8ce5fb40.chunk.js.map": "/benlutz/gag-timeline/static/js/787.8ce5fb40.chunk.js.map"
+    "main.css": "/gag-timeline/static/css/main.e6c13ad2.css",
+    "main.js": "/gag-timeline/static/js/main.b60da1dd.js",
+    "static/js/787.8ce5fb40.chunk.js": "/gag-timeline/static/js/787.8ce5fb40.chunk.js",
+    "index.html": "/gag-timeline/index.html",
+    "main.e6c13ad2.css.map": "/gag-timeline/static/css/main.e6c13ad2.css.map",
+    "main.b60da1dd.js.map": "/gag-timeline/static/js/main.b60da1dd.js.map",
+    "787.8ce5fb40.chunk.js.map": "/gag-timeline/static/js/787.8ce5fb40.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.00693d54.js"
+    "static/js/main.b60da1dd.js"
   ]
 }
