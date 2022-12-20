@@ -46,16 +46,23 @@ const App = () => {
     <div className="App">
       <Navbar variant="sticky" />
       <StyledContainer>
-        <h1 style={{ textAlign: 'center' }}>
-          Geschichten aus der Geschichte <br /> gefiltert
+        <h1 style={{ textAlign: 'center', fontWeight: 'normal' }}>
+          Geschichten aus der{' '}
+          <span style={{ fontFamily: 'serif' }}>
+            <i>Geschichte</i>
+          </span>{' '}
+          <br />
+          <span style={{ fontSize: '1.5rem' }}>sortiert</span>
         </h1>
-        <p>RSS Items: {episodes?.length}</p>
-        {/* <p>Full Items: {fullEps?.length}</p>
+
+        {/* <p>RSS Items: {episodes?.length}</p>
+        <p>Full Items: {fullEps?.length}</p>
         <p>BonusEps: {bonusEps?.length}</p>
-        <p>TrailerEps: {trailerEps?.length}</p> */}
+        <p>TrailerEps: {trailerEps?.length}</p>
         <>----</>
         <p>Episodes With Year: {episodesWithYear?.length}</p>
-        <p>Episodes Without Year: {episodesWithoutYear?.length}</p>
+        <p>Episodes Without Year: {episodesWithoutYear?.length}</p> */}
+
         <div style={{ textAlign: 'center' }}>
           <StyledButton
             onClick={() => setView('century')}
