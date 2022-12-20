@@ -9,8 +9,7 @@ export const StyledButton = styled('button', {
   border: 'solid',
   borderColor: '$primary',
   color: '$primary',
-  width: 100,
-  textAlign: 'center',
+  minWidth: '3rem',
 
   variants: {
     position: {
@@ -18,6 +17,7 @@ export const StyledButton = styled('button', {
         borderTopLeftRadius: 25,
         borderBottomLeftRadius: 25,
         borderRight: 0,
+        paddingRight: 15,
       },
       right: {
         borderTopRightRadius: 25,
