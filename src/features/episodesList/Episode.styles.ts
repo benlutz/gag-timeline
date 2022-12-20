@@ -16,13 +16,16 @@ export const StyledEpisodeCardContent = styled('div', {
   padding: '0.8rem',
 });
 
-export const StyledImagePlaceholder = styled('div', {
+export const StyledImageContainer = styled('div', {
   minWidth: 100,
   maxWidth: 100,
+  minHeight: 100,
   display: 'flex',
   background: 'grey',
   justifyContent: 'center',
   alignItems: 'center',
   textAlign: 'center',
   fontSize: 10,
+  margin: 10,
+  borderRadius: 15,
 });

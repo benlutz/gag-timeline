@@ -2,7 +2,7 @@ import { EpisodeType } from '../../lib/types';
 import {
   StyledEpisodeCard,
   StyledEpisodeCardContent,
-  StyledImagePlaceholder,
+  StyledImageContainer,
 } from './Episode.styles';
 
 type EpisodeCardProps = {
@@ -15,20 +15,25 @@ export const EpisodeCard = (props: EpisodeCardProps) => {
   return (
     <a href={episode.link} target="_blank" rel="noreferrer">
       <StyledEpisodeCard>
-        {episode.itunes_image?.href ? (
-          <img
-            src={episode.itunes_image?.href}
-            alt=""
-            style={{ maxWidth: 100, maxHeight: 100, aspectRatio: 1 }}
-          />
-        ) : (
-          <StyledImagePlaceholder>
+        <StyledImageContainer>
+          {episode.itunes_image?.href ? (
+            <img
+              src={episode.itunes_image?.href}
+              alt=""
+              style={{
+                maxWidth: 100,
+                maxHeight: 100,
+                aspectRatio: 1,
+                borderRadius: 15,
+              }}
+            />
+          ) : (
             <span>
               Kein Bild <br />
               verfügbar
             </span>
-          </StyledImagePlaceholder>
-        )}
+          )}
+        </StyledImageContainer>
         <StyledEpisodeCardContent>
           <p style={{ margin: 0, fontSize: 14 }}>
             {episode.year} - {episode.id}

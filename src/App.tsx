@@ -49,13 +49,13 @@ const App = () => {
         <h1 style={{ textAlign: 'center' }}>
           Geschichten aus der Geschichte <br /> gefiltert
         </h1>
-        {/* <p>RSS Items: {episodes?.length}</p>
-        <p>Full Items: {fullEps?.length}</p>
+        <p>RSS Items: {episodes?.length}</p>
+        {/* <p>Full Items: {fullEps?.length}</p>
         <p>BonusEps: {bonusEps?.length}</p>
-        <p>TrailerEps: {trailerEps?.length}</p>
+        <p>TrailerEps: {trailerEps?.length}</p> */}
         <>----</>
         <p>Episodes With Year: {episodesWithYear?.length}</p>
-        <p>Episodes Without Year: {episodesWithoutYear?.length}</p> */}
+        <p>Episodes Without Year: {episodesWithoutYear?.length}</p>
         <div style={{ textAlign: 'center' }}>
           <StyledButton
             onClick={() => setView('century')}

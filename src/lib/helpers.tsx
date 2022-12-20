@@ -10,6 +10,7 @@ export const getDecade = (year: number) => {
 };
 
 export const getCentury = (year: number) => {
+  if (year < 0) return -1;
   return Math.ceil(year / 100);
 };
 
