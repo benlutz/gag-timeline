@@ -2,7 +2,7 @@
   "name": "gag-timeline",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/benlutz/gag-timeline",
+  "homepage": "https://benlutz.github.io/gag-timeline/",
   "license": "MIT",
   "dependencies": {
     "@stitches/react": "^1.2.8",
