@@ -42,6 +42,7 @@ export const globalStyles = globalCss({
   a: {
     all: 'unset',
     cursor: 'pointer',
+    color: '#9f6e00',
   },
   h1: {
     marginBottom: 50,

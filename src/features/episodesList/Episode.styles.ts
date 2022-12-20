@@ -2,6 +2,7 @@ import { styled } from '../../stitches.config';
 
 export const StyledEpisodeCard = styled('div', {
   // border: 'solid',
+  color: 'Black',
   borderRadius: 25,
   // borderColor: 'LightGrey',
   overflow: 'hidden',
