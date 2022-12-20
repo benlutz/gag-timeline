@@ -1,7 +1,7 @@
 {
   "name": "gag-timeline",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://github.com/benlutz/gag-timeline",
   "license": "MIT",
   "dependencies": {
