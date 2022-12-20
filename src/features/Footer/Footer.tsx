@@ -18,8 +18,10 @@ export const Footer = () => {
         <a href={podigeeFeed} target={'_blank'} rel="noreferrer">
           Podigee.io
         </a>{' '}
-        genutzt. Die Jahreszahlen wurden teils automatisiert aus Titel und
-        Beschreibung entnommen, teils sorgfältig per Hand ergänzt.
+        genutzt. Die Genehmigung hierzu wurde am 19.12.2022 bis auf Widerruf
+        erteilt. Die Jahreszahlen wurden teils automatisiert aus Titel und
+        Beschreibung entnommen, teils sorgfältig per Hand ergänzt. Fehler und
+        Änderungen vorbehalten.
       </p>
       <p>
         <a href="https://www.benjaminlutz.at/impressum">Impressum</a>
