@@ -5,11 +5,11 @@ export const StyledButton = styled('button', {
   cursor: 'pointer',
   paddingHorizontal: '2rem',
   paddingVertical: '1rem',
-
   border: 'solid',
   borderColor: '$primary',
   color: '$primary',
   minWidth: '3rem',
+  textAlign: 'center',
 
   variants: {
     position: {
