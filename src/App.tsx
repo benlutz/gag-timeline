@@ -4,6 +4,7 @@ import { YearView } from './features/episodesList/YearView';
 import { Footer } from './features/Footer/Footer';
 import { StyledButton } from './features/Layout/Button.styles';
 import { StyledContainer } from './features/Layout/Layout.styles';
+import { LoadingView } from './features/Loading/LoadingView';
 import { Navbar } from './features/Navbar/Navbar';
 import { getEpisodesFromRSSFeed } from './lib/episodes';
 import { EpisodeType } from './lib/types';
@@ -33,7 +34,7 @@ const App = () => {
   //   (episode) => episode.itunes_episodeType === 'full'
   // );
 
-  if (!episodes) return <div>Loading Data...</div>;
+  if (!episodes) return <LoadingView />;
 
   const episodesWithYear = episodes.filter(
     (episode) => episode.year && episode.itunes_episodeType === 'full'
