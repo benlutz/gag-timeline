@@ -2,6 +2,8 @@
 
 Dieses Projekt wurde erstellt von [Benjamin Lutz](https://www.benjaminlutz.at). Ziel war es, die Episoden des Podcasts 'Geschichten aus der Geschichte' chronologisch nach Inhalt zu sortieren und Hörer:innen es zu ermöglichen, die Folgen von Anbeginn der Zeit bis heute hören zu können und die zeitliche Nähe verschiedener Folgen aufzuzeigen.
 
+![](./screenshot.png)
+
 ## Über die Daten
 
 Die Episodeninfos werden aus dem offiziellen Podcastfeed gezogen. Zur Einordnung werden Jahreszahlen automatisch aus der Beschreibung der Episode gezogen. Da dies nicht für alle Folgen möglich ist und um Fehler zu korrigieren, wurden die fehlenden Jahreszahlen per Hand ergänzt. Die Daten können [hier](./src/lib/episodeYearData.json) geprüft werden.
