@@ -1,30 +1,16 @@
-## Available Scripts
+# gag-timeline
 
-In the project directory, you can run:
+Dieses Projekt wurde erstellt von [Benjamin Lutz](https://www.benjaminlutz.at). Ziel war es, die Episoden des Podcasts 'Geschichten aus der Geschichte' chronologisch nach Inhalt zu sortieren und Hörer:innen es zu ermöglichen, die Folgen von Anbeginn der Zeit bis heute hören zu können und die zeitliche Nähe verschiedener Folgen aufzuzeigen.
 
-### `npm start`
+## Über die Daten
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Die Episodeninfos werden aus dem offiziellen Podcastfeed gezogen. Zur Einordnung werden Jahreszahlen automatisch aus der Beschreibung der Episode gezogen. Da dies nicht für alle Folgen möglich ist und um Fehler zu korrigieren, wurden die fehlenden Jahreszahlen per Hand ergänzt. Die Daten können [hier](./src/lib/episodeYearData.json) geprüft werden.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Disclaimer
 
-### `npm test`
+Episodenbilder, Titel und Idee © [GeschichteFM GmbH](https://www.geschichte.fm/).
+Als Datenquelle wurde der GeschichteFM Feed von [Podigee.io](https://geschichten-aus-der-geschichte.podigee.io/feed/mp3) genutzt. Die Genehmigung hierzu wurde am 19.12.2022 bis auf Widerruf erteilt. Die Jahreszahlen wurden teils automatisiert aus Titel und Beschreibung entnommen, teils sorgfältig per Hand ergänzt. Fehler und Änderungen vorbehalten.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run deplay`
-
-Deploys to branch GH-Pages
+Dieses Projekt wurde mit React erstellt und wird auf Github Pages gehostet. Die verfügbaren Scripte können in der [DEV-Readme](./DEV-README.md) eingesehen werden.
