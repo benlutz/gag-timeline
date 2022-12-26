@@ -3,28 +3,20 @@ import { styled } from '../../stitches.config';
 export const StyledButton = styled('button', {
   all: 'unset',
   cursor: 'pointer',
-  paddingHorizontal: '2rem',
-  paddingVertical: '1rem',
+  paddingHorizontal: '2em',
+  paddingVertical: '0.8em',
 
   border: 'solid',
   borderColor: '$primary',
   color: '$primary',
-  minWidth: '3rem',
+  minWidth: '1rem',
+  fontSize: '0.8rem',
+
+  borderRadius: 25,
+  marginHorizontal: '0.2em',
+  marginVertical: '0.2em',
 
   variants: {
-    position: {
-      left: {
-        borderTopLeftRadius: 25,
-        borderBottomLeftRadius: 25,
-        borderRight: 0,
-        paddingRight: 15,
-      },
-      right: {
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderLeft: 0,
-      },
-    },
     active: {
       true: {
         background: '$primary',

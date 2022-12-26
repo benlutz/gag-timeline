@@ -1,5 +1,6 @@
 import React from 'react';
 import { CenturyView } from './features/episodesList/CenturyView';
+import { CreatedAtView } from './features/episodesList/CreatedAtView';
 import { YearView } from './features/episodesList/YearView';
 import { Footer } from './features/Footer/Footer';
 import { StyledButton } from './features/Layout/Button.styles';
@@ -13,7 +14,9 @@ import { globalStyles } from './stitches.config';
 const App = () => {
   globalStyles();
   const [episodes, setEpisodes] = React.useState<EpisodeType[] | null>(null);
-  const [view, setView] = React.useState<'century' | 'year'>('century');
+  const [view, setView] = React.useState<'century' | 'year' | 'createdAt'>(
+    'century'
+  );
 
   React.useEffect(() => {
     const doAsync = async () => {
@@ -64,22 +67,28 @@ const App = () => {
         <div style={{ textAlign: 'center' }}>
           <StyledButton
             onClick={() => setView('century')}
-            position="left"
             active={view === 'century'}
           >
             Jahrhunderte
           </StyledButton>
           <StyledButton
             onClick={() => setView('year')}
-            position="right"
             active={view === 'year'}
           >
             Jahre
+          </StyledButton>
+
+          <StyledButton
+            onClick={() => setView('createdAt')}
+            active={view === 'createdAt'}
+          >
+            Erscheinung
           </StyledButton>
         </div>
 
         {view === 'century' && <CenturyView episodes={episodesWithYear} />}
         {view === 'year' && <YearView episodes={episodesWithYear} />}
+        {view === 'createdAt' && <CreatedAtView episodes={episodesWithYear} />}
 
         <h2>Ohne Zuordnung</h2>
         <ul>
