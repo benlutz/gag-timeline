@@ -13,8 +13,8 @@ export const StyledButton = styled('button', {
   fontSize: '0.8rem',
 
   borderRadius: 25,
-  marginHorizontal: '0.2em',
-  marginVertical: '0.2em',
+  marginHorizontal: '0.3em',
+  marginVertical: '0.3em',
 
   variants: {
     active: {
