@@ -2,6 +2,7 @@ import React from 'react';
 import { groupEpisodesByCentury } from '../../lib/helpers';
 import { EpisodeType } from '../../lib/types';
 import { EpisodeCard } from './EpisodeCard';
+import { EpisodesWithoutYear } from './EpisodesWithoutYear';
 
 type CenturyViewProps = {
   episodes: EpisodeType[];
@@ -10,9 +11,13 @@ type CenturyViewProps = {
 export const CenturyView = (props: CenturyViewProps) => {
   const { episodes } = props;
 
+  const episodesWithYear = episodes.filter(
+    (episode) => episode.year && episode.itunes_episodeType === 'full'
+  );
+
   return (
     <>
-      {groupEpisodesByCentury(episodes).map((data, n) => {
+      {groupEpisodesByCentury(episodesWithYear).map((data, n) => {
         return (
           <div key={n}>
             <h2 id={data.century.toString()}>
@@ -31,6 +36,8 @@ export const CenturyView = (props: CenturyViewProps) => {
           </div>
         );
       })}
+
+      <EpisodesWithoutYear episodes={episodes} />
     </>
   );
 };

@@ -39,13 +39,6 @@ const App = () => {
 
   if (!episodes) return <LoadingView />;
 
-  const episodesWithYear = episodes.filter(
-    (episode) => episode.year && episode.itunes_episodeType === 'full'
-  );
-  const episodesWithoutYear = episodes.filter(
-    (episode) => !episode.year && episode.itunes_episodeType === 'full'
-  );
-
   return (
     <div className="App">
       <Navbar variant="sticky" />
@@ -86,22 +79,10 @@ const App = () => {
           </StyledButton>
         </div>
 
-        {view === 'century' && <CenturyView episodes={episodesWithYear} />}
-        {view === 'year' && <YearView episodes={episodesWithYear} />}
-        {view === 'createdAt' && <CreatedAtView episodes={episodesWithYear} />}
+        {view === 'century' && <CenturyView episodes={episodes} />}
+        {view === 'year' && <YearView episodes={episodes} />}
+        {view === 'createdAt' && <CreatedAtView episodes={episodes} />}
 
-        <h2>Ohne Zuordnung</h2>
-        <ul>
-          {episodesWithoutYear.map((episode, i) => {
-            return (
-              <li key={i}>
-                <a href={episode.link} target="_blank" rel="noreferrer">
-                  {episode.title}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
         <Footer />
       </StyledContainer>
     </div>

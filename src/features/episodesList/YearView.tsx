@@ -1,6 +1,7 @@
 import { groupEpisodesByYear } from '../../lib/helpers';
 import { EpisodeType } from '../../lib/types';
 import { EpisodeCard } from './EpisodeCard';
+import { EpisodesWithoutYear } from './EpisodesWithoutYear';
 
 type YearViewProps = {
   episodes: EpisodeType[];
@@ -9,9 +10,13 @@ type YearViewProps = {
 export const YearView = (props: YearViewProps) => {
   const { episodes } = props;
 
+  const episodesWithYear = episodes.filter(
+    (episode) => episode.year && episode.itunes_episodeType === 'full'
+  );
+
   return (
     <>
-      {groupEpisodesByYear(episodes).map((data, n) => {
+      {groupEpisodesByYear(episodesWithYear).map((data, n) => {
         return (
           <div key={n}>
             <h2>
@@ -29,6 +34,8 @@ export const YearView = (props: YearViewProps) => {
           </div>
         );
       })}
+
+      <EpisodesWithoutYear episodes={episodes} />
     </>
   );
 };
