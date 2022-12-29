@@ -1,6 +1,6 @@
 import { podigeeFeed } from '../../lib/episodes';
 import { StyledFooter } from './Footer.styles';
-import { version } from '../../../package.json';
+import packageInfo from '../../../package.json';
 
 export const Footer = () => {
   return (
@@ -28,7 +28,7 @@ export const Footer = () => {
         <p>
           © {new Date().getFullYear()} Benjamin Lutz |{' '}
           <a href="https://www.benjaminlutz.at/impressum">Impressum</a> | v
-          {version}
+          {packageInfo.version}
         </p>
       </p>
     </StyledFooter>
