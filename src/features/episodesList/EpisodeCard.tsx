@@ -16,9 +16,9 @@ export const EpisodeCard = (props: EpisodeCardProps) => {
     <a href={episode.link} target="_blank" rel="noreferrer">
       <StyledEpisodeCard>
         <StyledImageContainer>
-          {episode.itunes_image?.href ? (
+          {episode['itunes:image'] ? (
             <img
-              src={episode.itunes_image?.href}
+              src={episode['itunes:image']['@_href']}
               alt=""
               style={{
                 maxWidth: 100,

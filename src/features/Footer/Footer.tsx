@@ -25,11 +25,9 @@ export const Footer = () => {
         Änderungen vorbehalten.
       </p>
       <p>
-        <p>
-          © {new Date().getFullYear()} Benjamin Lutz |{' '}
-          <a href="https://www.benjaminlutz.at/impressum">Impressum</a> | v
-          {packageInfo.version}
-        </p>
+        © {new Date().getFullYear()} Benjamin Lutz |{' '}
+        <a href="https://www.benjaminlutz.at/impressum">Impressum</a> | v
+        {packageInfo.version}
       </p>
     </StyledFooter>
   );
