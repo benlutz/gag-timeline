@@ -11,7 +11,7 @@ export const YearView = (props: YearViewProps) => {
   const { episodes } = props;
 
   const episodesWithYear = episodes.filter(
-    (episode) => episode.year && episode.itunes_episodeType === 'full'
+    (episode) => episode.year && episode['itunes:episodeType'] === 'full'
   );
 
   return (

@@ -1,15 +1,19 @@
-import parse from 'rss-to-json';
 import { getCentury, getDecade } from './helpers';
 import { EpisodeType } from './types';
 import episodeYearData from './episodeYearData.json';
+import { XMLParser } from 'fast-xml-parser';
 
 export const podigeeFeed =
   'https://geschichten-aus-der-geschichte.podigee.io/feed/mp3';
 
 export const getEpisodesFromRSSFeed = async () => {
-  const feed = await parse(podigeeFeed);
+  const xml = await fetch(podigeeFeed).then((res) => res.text());
+  const parser = new XMLParser({
+    ignoreAttributes: false,
+  });
 
-  const episodes = feed.items.map((item: EpisodeType) => {
+  const jsonObj = parser.parse(xml);
+  const episodes = jsonObj.rss.channel.item.map((item: EpisodeType) => {
     item.id = item.title.split(':')[0];
     item.titleShort = item.title.split(':')[1].trim();
 
@@ -24,7 +28,7 @@ export const getEpisodesFromRSSFeed = async () => {
     }
 
     const year = episodeYearData.find(
-      (ep) => ep.id === item.itunes_episode
+      (ep) => ep.id === item['itunes:episode']
     )?.year;
 
     if (year) {

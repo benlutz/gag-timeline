@@ -12,7 +12,7 @@ export const CenturyView = (props: CenturyViewProps) => {
   const { episodes } = props;
 
   const episodesWithYear = episodes.filter(
-    (episode) => episode.year && episode.itunes_episodeType === 'full'
+    (episode) => episode.year && episode['itunes:episodeType'] === 'full'
   );
 
   return (

@@ -8,7 +8,7 @@ export const EpisodesWithoutYear = (props: EpisodesWithoutYearProps) => {
   const { episodes } = props;
 
   const episodesWithoutYear = episodes.filter(
-    (episode) => !episode.year && episode.itunes_episodeType === 'full'
+    (episode) => !episode.year && episode['itunes:episodeType'] === 'full'
   );
 
   return (

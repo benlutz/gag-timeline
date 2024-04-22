@@ -1,26 +1,27 @@
 export type EpisodeType = {
-  id: string;
   title: string;
+  'itunes:title': string;
   description: string;
+  pubDate: string;
   link: string;
-  published: Date;
-  created: Date;
-  category: any[];
-  content: string;
-  enclosures: any[];
-  content_encoded: string;
-  itunes_summary: string;
-  itunes_author: string;
-  itunes_explicit: 'no';
-  itunes_duration: number;
-  itunes_episode: number;
-  itunes_episodeType: 'full' | 'bonus' | 'trailer';
-  itunes_image: {
-    href: string;
+  guid: string;
+  'content:encoded': string;
+  'itunes:image': {
+    '@_href': string;
   };
-  media: {};
+  'itunes:episode': number;
+  'itunes:episodeType': string;
+  'itunes:subtitle': string;
+  'itunes:summary': string;
+  'itunes:explicit': string;
+  'itunes:keywords': string;
+  'itunes:author': string;
+  enclosure: string;
+  'itunes:duration': number;
+  'podcast:episode': number;
+  id: string;
   titleShort: string;
   year: number;
+  century: number;
   decade: number;
-  century: nu;
 };
