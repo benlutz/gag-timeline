@@ -14,8 +14,15 @@ export const getEpisodesFromRSSFeed = async () => {
 
   const jsonObj = parser.parse(xml);
   const episodes = jsonObj.rss.channel.item.map((item: EpisodeType) => {
-    item.id = item.title.split(':')[0];
-    item.titleShort = item.title.split(':')[1].trim();
+    const titleSplit = item.title.split(':');
+
+    if (titleSplit.length > 1) {
+      item.id = titleSplit[0];
+      item.titleShort = titleSplit[1].trim();
+    } else {
+      item.id = "GAG";
+      item.titleShort = item.title;
+    }
 
     const yearInDescription =
       item.description.match(/[0-9][0-9][0-9][0-9]/)?.[0];
