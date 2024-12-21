@@ -21,4 +21,4 @@ Dieses Projekt wurde mit React erstellt und wird auf Github Pages gehostet. Die 
 
 Ein großer Dank für die Unterstützung geht an
 
-- [@mirkolenz](https://github.com/mirkolenz) ![Profile](https://github.com/mirkolenz.png?size=50)
+- [@mirkolenz](https://github.com/mirkolenz)
