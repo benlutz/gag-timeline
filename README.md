@@ -16,3 +16,9 @@ Als Datenquelle wurde der GeschichteFM Feed von [Podigee.io](https://geschichten
 ## Development
 
 Dieses Projekt wurde mit React erstellt und wird auf Github Pages gehostet. Die verfügbaren Scripte können in der [DEV-Readme](./DEV-README.md) eingesehen werden.
+
+## Contributors
+
+Ein großer Dank für die Unterstützung geht an
+
+- [@mirkolenz](https://github.com/mirkolenz) ![Profile](https://github.com/mirkolenz.png?size=50)
